@@ -1,3 +1,6 @@
+"use client";
+
+import { ArrowSquareOutIcon } from "@phosphor-icons/react";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -24,21 +27,27 @@ function ProjectLink({ title, link }: ProjectLinkProps) {
     return <span>{title}</span>;
   }
 
+  const isLive = !link.includes("github.com");
+
   return (
     <>
       <a
         href={link}
         target="_blank"
         rel="noopener noreferrer"
-        className="inline-flex items-center gap-1 hover:underline"
+        className="inline-flex items-center gap-1.5 hover:underline"
         aria-label={`${title} project (opens in new tab)`}
       >
         {title}
-        <span
-          className="size-1 rounded-full bg-green-500"
-          title="Active project indicator"
-          aria-hidden="true"
-        />
+        {isLive ? (
+          <ArrowSquareOutIcon className="size-3.5 text-green-600" weight="bold" />
+        ) : (
+          <span
+            className="size-1 rounded-full bg-green-500"
+            title="Active project indicator"
+            aria-hidden="true"
+          />
+        )}
       </a>
       <div
         className="hidden font-mono text-xs underline print:visible"
@@ -91,10 +100,10 @@ interface ProjectCardProps {
  */
 function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
   return (
-    <Card className="flex h-full flex-col overflow-hidden border p-3">
-      <CardHeader>
+    <Card className="flex h-full flex-col overflow-hidden border p-3 print:border-0 print:p-0 print:shadow-none">
+      <CardHeader className="print:p-0">
         <div className="space-y-1">
-          <CardTitle className="text-base">
+          <CardTitle className="text-base print:text-sm">
             <ProjectLink title={title} link={link} />
           </CardTitle>
           <CardDescription
@@ -105,8 +114,13 @@ function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
           </CardDescription>
         </div>
       </CardHeader>
-      <CardContent className="mt-auto flex">
-        <ProjectTags tags={tags} />
+      <CardContent className="mt-auto print:hidden">
+        <div className="flex flex-col gap-1">
+          <span className="text-[10px] font-medium text-muted-foreground">
+            Tech Stack:
+          </span>
+          <ProjectTags tags={tags} />
+        </div>
       </CardContent>
     </Card>
   );
@@ -121,19 +135,19 @@ interface ProjectsProps {
  */
 export function Projects({ projects }: ProjectsProps) {
   return (
-    <Section className="scroll-mb-16 print:space-y-4">
-      <h2 className="text-xl font-bold" id="side-projects">
-        Side projects
+    <Section className="scroll-mb-16 print:space-y-2">
+      <h2 className="text-xl font-bold print:text-lg" id="side-projects">
+        Projects
       </h2>
       <div
-        className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-3 print:grid-cols-3 print:gap-2"
+        className="-mx-3 grid grid-cols-1 gap-3 md:grid-cols-2 print:mx-0 print:grid-cols-1 print:gap-0"
         role="feed"
         aria-labelledby="side-projects"
       >
         {projects.map((project) => (
           <article
             key={project.title}
-            className="h-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm print:hover:translate-y-0 print:hover:shadow-none"
+            className="h-full transition-all duration-200 hover:-translate-y-0.5 hover:shadow-sm print:translate-y-0 print:shadow-none"
           >
             <ProjectCard
               title={project.title}

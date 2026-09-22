@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { CommandMenu } from "@/components/command-menu";
+import { ThemeToggle } from "@/components/theme-toggle";
 import { RESUME_DATA } from "@/data/resume-data";
 import { generateResumeStructuredData } from "@/lib/structured-data";
 import { Education } from "./components/education";
@@ -7,6 +8,7 @@ import { Header } from "./components/header";
 import { Projects } from "./components/projects";
 import { Skills } from "./components/skills";
 import { Summary } from "./components/summary";
+import { UiUx } from "./components/uiux";
 import { WorkExperience } from "./components/work-experience";
 
 export const metadata: Metadata = {
@@ -19,7 +21,7 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "https://cv.jarocki.me/opengraph-image",
+        url: `/myimage.jpeg`,
         width: 1200,
         height: 630,
         alt: `${RESUME_DATA.name}'s profile picture`,
@@ -30,7 +32,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${RESUME_DATA.name} - Resume`,
     description: RESUME_DATA.about,
-    images: ["https://cv.jarocki.me/opengraph-image"],
+    images: ["/myimage.jpeg"],
   },
 };
 
@@ -112,12 +114,20 @@ export default function ResumePage() {
             >
               <Projects projects={RESUME_DATA.projects} />
             </div>
+            <div
+              className="animate-fade-in"
+              style={{ animationDelay: "450ms" }}
+            >
+              <UiUx designs={RESUME_DATA.uiux} />
+            </div>
           </div>
         </section>
 
         <nav className="print:hidden" aria-label="Quick navigation">
           <CommandMenu links={getCommandMenuLinks()} />
         </nav>
+
+        <ThemeToggle />
       </main>
     </>
   );

@@ -1,0 +1,14 @@
+{
+  "jsPlugins": ["@shadcn/lint"],
+  "settings": {
+    "shadcn": {
+      "ui": "@/components/ui"
+    }
+  },
+  "ignorePatterns": [
+    "node_modules",
+    ".next",
+    "public",
+    "src/types.d.ts"
+  ]
+}

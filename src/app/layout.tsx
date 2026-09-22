@@ -1,12 +1,26 @@
 import { Analytics } from "@vercel/analytics/react";
-import { GeistMono } from "geist/font/mono";
-import { GeistSans } from "geist/font/sans";
 import type { Metadata, Viewport } from "next";
+import { Geist, Geist_Mono, Noto_Serif_Georgian } from "next/font/google";
 
 import "./globals.css";
 import type React from "react";
 import { ErrorBoundary } from "@/components/error-boundary";
 import { RESUME_DATA } from "@/data/resume-data";
+
+const fontSans = Geist({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
+
+const fontSerif = Noto_Serif_Georgian({
+  subsets: ["latin"],
+  variable: "--font-serif",
+});
+
+const fontMono = Geist_Mono({
+  subsets: ["latin"],
+  variable: "--font-mono",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://cv.jarocki.me"),
@@ -57,7 +71,6 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: `${RESUME_DATA.name} - ${RESUME_DATA.about}`,
     description: RESUME_DATA.about,
-    creator: "@BartoszJarocki",
   },
   alternates: {
     canonical: RESUME_DATA.personalWebsiteUrl,
@@ -76,12 +89,14 @@ export const viewport: Viewport = {
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang="en" className={`${GeistSans.variable} ${GeistMono.variable}`}>
-      <body>
+    <html lang="en">
+      <body
+        className={`${fontSans.variable} ${fontSerif.variable} ${fontMono.variable} antialiased`}
+      >
         <ErrorBoundary>{children}</ErrorBoundary>
         <Analytics />
       </body>

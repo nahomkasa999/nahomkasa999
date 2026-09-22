@@ -50,4 +50,10 @@ export interface ResumeData {
       href: string;
     };
   }>;
+  uiux: Array<{
+    title: string;
+    description: string;
+    image: string;
+    skills: string[];
+  }>;
 }
