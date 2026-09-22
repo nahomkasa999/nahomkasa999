@@ -31,7 +31,7 @@ function UiUxCard({ title, description, skills, figma }: UiUxCardProps) {
         <div className="space-y-1">
           <CardTitle className="text-base print:text-sm">{title}</CardTitle>
           <CardDescription
-            className="text-pretty font-mono text-xs print:text-[10px]"
+            className="text-pretty text-xs print:text-[10px]"
             aria-label="Design description"
           >
             {description}

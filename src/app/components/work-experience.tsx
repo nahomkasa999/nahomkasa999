@@ -101,7 +101,7 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
           <WorkPeriod start={start} end={end} />
         </div>
 
-        <h4 className="font-mono text-sm font-semibold leading-none print:text-[12px]">
+        <h4 className="text-sm font-semibold leading-none print:text-[12px]">
           {title}
         </h4>
       </CardHeader>
@@ -110,14 +110,14 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
         <div className="mt-2 text-xs text-foreground/80 print:mt-1 print:text-[10px] text-pretty">
           {description}
           {highlights && highlights.length > 0 && (
-            <ul className="list-inside list-disc">
+            <ul className="mt-3 list-inside list-disc space-y-1.5 print:mt-1 print:space-y-0.5">
               {highlights.map((highlight) => (
                 <li key={highlight}>{highlight}</li>
               ))}
             </ul>
           )}
         </div>
-        <div className="mt-3">
+        <div className="mt-5 print:mt-2">
           <BadgeList className="flex-wrap gap-1" badges={badges} />
         </div>
       </CardContent>
@@ -140,7 +140,7 @@ export function WorkExperience({ work }: WorkExperienceProps) {
         Work Experience
       </h2>
       <div
-        className="space-y-4 print:space-y-0"
+        className="space-y-6 print:space-y-2"
         role="feed"
         aria-labelledby="work-experience"
       >
