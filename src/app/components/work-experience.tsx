@@ -28,7 +28,7 @@ function BadgeList({ className, badges }: BadgeListProps) {
         <li key={badge}>
           <Badge
             variant="secondary"
-            className="align-middle text-xs print:px-1 print:py-0.5 print:text-[8px] print:leading-tight"
+            className="align-middle text-sm print:px-1 print:py-0.5 print:text-[10px] print:leading-tight"
           >
             {badge}
           </Badge>
@@ -49,7 +49,7 @@ interface WorkPeriodProps {
 function WorkPeriod({ start, end }: WorkPeriodProps) {
   return (
     <div
-      className="text-sm tabular-nums text-gray-500"
+      className="text-base tabular-nums text-gray-500"
       title={`Employment period: ${start} to ${end ?? "Present"}`}
     >
       {start} - {end ?? "Present"}
@@ -94,20 +94,20 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
   return (
     <>
       <CardHeader className="print:space-y-1">
-        <div className="flex items-center justify-between gap-x-2 text-base">
+        <div className="flex items-center justify-between gap-x-2 text-lg">
           <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none print:text-sm">
             <CompanyLink company={company} link={link} />
           </h3>
           <WorkPeriod start={start} end={end} />
         </div>
 
-        <h4 className="text-sm font-semibold leading-none print:text-[12px]">
+        <h4 className="text-base font-semibold leading-none print:text-[14px]">
           {title}
         </h4>
       </CardHeader>
 
       <CardContent>
-        <div className="mt-2 text-xs text-foreground/80 print:mt-1 print:text-[10px] text-pretty">
+        <div className="mt-2 text-sm text-foreground/80 print:mt-1 print:text-[12px] text-pretty">
           {description}
           {highlights && highlights.length > 0 && (
             <ul className="mt-3 list-inside list-disc space-y-1.5 print:mt-1 print:space-y-0.5">
@@ -136,7 +136,7 @@ interface WorkExperienceProps {
 export function WorkExperience({ work }: WorkExperienceProps) {
   return (
     <Section>
-      <h2 className="text-xl font-bold" id="work-experience">
+      <h2 className="text-2xl font-bold" id="work-experience">
         Work Experience
       </h2>
       <div

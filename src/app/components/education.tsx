@@ -15,7 +15,7 @@ interface EducationPeriodProps {
 function EducationPeriod({ start, end }: EducationPeriodProps) {
   return (
     <div
-      className="text-sm tabular-nums text-gray-500"
+      className="text-base tabular-nums text-gray-500"
       title={`Period: ${start} to ${end}`}
     >
       {start} - {end}
@@ -37,7 +37,7 @@ function EducationItem({ education }: EducationItemProps) {
   return (
     <>
       <CardHeader>
-        <div className="flex items-center justify-between gap-x-2 text-base">
+        <div className="flex items-center justify-between gap-x-2 text-lg">
           <h3 className="font-semibold leading-none" id={schoolId}>
             {school}
           </h3>
@@ -45,7 +45,7 @@ function EducationItem({ education }: EducationItemProps) {
         </div>
       </CardHeader>
       <CardContent
-        className="mt-2 text-foreground/80 print:text-[12px]"
+        className="mt-2 text-foreground/80 print:text-[14px]"
         aria-labelledby={schoolId}
       >
         {degree}
@@ -65,7 +65,7 @@ interface EducationListProps {
 export function Education({ education }: EducationListProps) {
   return (
     <Section>
-      <h2 className="text-xl font-bold" id="education-section">
+      <h2 className="text-2xl font-bold" id="education-section">
         Education
       </h2>
       <div

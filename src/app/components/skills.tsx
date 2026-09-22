@@ -41,7 +41,7 @@ interface SkillsProps {
 export function Skills({ skills, className }: SkillsProps) {
   return (
     <Section className={className}>
-      <h2 className="text-xl font-bold" id="skills-section">
+      <h2 className="text-2xl font-bold" id="skills-section">
         Skills
       </h2>
       <SkillsList skills={skills} />

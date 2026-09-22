@@ -29,9 +29,9 @@ function UiUxCard({ title, description, skills, figma }: UiUxCardProps) {
     <Card className="flex h-full flex-col overflow-hidden border p-3 print:border-0 print:p-0 print:shadow-none">
       <CardHeader className="print:p-0">
         <div className="space-y-1">
-          <CardTitle className="text-base print:text-sm">{title}</CardTitle>
+          <CardTitle className="text-lg print:text-base">{title}</CardTitle>
           <CardDescription
-            className="text-pretty text-xs print:text-[10px]"
+            className="text-pretty text-sm print:text-[12px]"
             aria-label="Design description"
           >
             {description}
@@ -41,7 +41,7 @@ function UiUxCard({ title, description, skills, figma }: UiUxCardProps) {
               href={figma}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex w-fit items-center gap-1 text-xs text-muted-foreground hover:text-foreground hover:underline"
+              className="inline-flex w-fit items-center gap-1 text-sm text-muted-foreground hover:text-foreground hover:underline"
               aria-label={`${title} Figma file (opens in new tab)`}
             >
               View on Figma
@@ -53,7 +53,7 @@ function UiUxCard({ title, description, skills, figma }: UiUxCardProps) {
       <CardContent className="mt-auto print:hidden">
         {skills.length > 0 && (
           <div className="flex flex-col gap-1">
-            <span className="text-[10px] font-medium text-muted-foreground">
+            <span className="text-xs font-medium text-muted-foreground">
               Skills:
             </span>
             <ul
@@ -62,7 +62,7 @@ function UiUxCard({ title, description, skills, figma }: UiUxCardProps) {
             >
               {skills.map((skill) => (
                 <li key={skill}>
-                  <Badge className="px-1 py-0 text-[10px]" variant="secondary">
+                  <Badge className="px-1 py-0 text-xs" variant="secondary">
                     {skill}
                   </Badge>
                 </li>
@@ -85,7 +85,7 @@ interface UiUxProps {
 export function UiUx({ designs }: UiUxProps) {
   return (
     <Section className="scroll-mb-16 print:space-y-2">
-      <h2 className="text-xl font-bold print:text-lg" id="uiux-designs">
+      <h2 className="text-2xl font-bold print:text-xl" id="uiux-designs">
         UI/UX Design
       </h2>
 

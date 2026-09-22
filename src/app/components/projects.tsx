@@ -53,7 +53,7 @@ function ProjectLink({ title, link }: ProjectLinkProps) {
         )}
       </a>
       <div
-        className="hidden text-xs underline print:visible"
+        className="hidden text-sm underline print:visible"
         aria-hidden="true"
       >
         {link.replace("https://", "").replace("www.", "").replace("/", "")}
@@ -80,7 +80,7 @@ function ProjectTags({ tags }: ProjectTagsProps) {
       {tags.map((tag) => (
         <li key={tag}>
           <Badge
-            className="px-1 py-0 text-[10px] print:px-1 print:py-0.5 print:text-[8px] print:leading-tight"
+            className="px-1 py-0 text-xs print:px-1 print:py-0.5 print:text-[10px] print:leading-tight"
             variant="secondary"
           >
             {tag}
@@ -106,11 +106,11 @@ function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
     <Card className="flex h-full flex-col overflow-hidden border p-3 print:border-0 print:p-0 print:shadow-none">
       <CardHeader className="print:p-0">
         <div className="space-y-1">
-          <CardTitle className="text-base print:text-sm">
+          <CardTitle className="text-lg print:text-base">
             <ProjectLink title={title} link={link} />
           </CardTitle>
           <CardDescription
-            className="text-pretty text-xs print:text-[10px]"
+            className="text-pretty text-sm print:text-[12px]"
             aria-label="Project description"
           >
             {description}
@@ -119,7 +119,7 @@ function ProjectCard({ title, description, tags, link }: ProjectCardProps) {
       </CardHeader>
       <CardContent className="mt-auto print:hidden">
         <div className="flex flex-col gap-1">
-          <span className="text-[10px] font-medium text-muted-foreground">
+          <span className="text-xs font-medium text-muted-foreground">
             Tech Stack:
           </span>
           <ProjectTags tags={tags} />
@@ -139,7 +139,7 @@ interface ProjectsProps {
 export function Projects({ projects }: ProjectsProps) {
   return (
     <Section className="scroll-mb-16 print:space-y-2">
-      <h2 className="text-xl font-bold print:text-lg" id="side-projects">
+      <h2 className="text-2xl font-bold print:text-xl" id="side-projects">
         Projects
       </h2>
       <div
