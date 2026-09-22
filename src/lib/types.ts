@@ -55,5 +55,6 @@ export interface ResumeData {
     description: string;
     image: string;
     skills: string[];
+    figma?: string;
   }>;
 }

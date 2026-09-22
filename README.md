@@ -1,89 +1,44 @@
-![cv](https://github.com/BartoszJarocki/cv/assets/1017620/79bdb9fc-0b20-4d2c-aafe-0526ad4a71d2)
+# Hi, I'm Nahom Kasa 👋
 
-<h1>minimalist cv <a href="https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2FBartoszJarocki%2Fcv"><img src="https://vercel.com/button" alt="Deploy with Vercel" height="24" align="right"></a></h1>
+**Full Stack Developer & UI/UX Designer** based in Addis Ababa, Ethiopia.
 
-[![Next.js](https://img.shields.io/badge/Next.js-16-black?logo=next.js)](https://nextjs.org/)
-[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-blue?logo=typescript)](https://www.typescriptlang.org/)
-[![Tailwind CSS](https://img.shields.io/badge/Tailwind%20CSS-3.4-38B2AC?logo=tailwind-css)](https://tailwindcss.com/)
+I build AI-integrated products from idea to launch — SaaS platforms, marketplaces, and enterprise apps — and I care as much about the design as the code behind it. Currently studying **B.Sc. in Civil Engineering at Addis Ababa University (2024 – 2030)** while working as a developer full-time.
 
-simple web app that renders a minimalist CV with print-friendly layout.
+## What I'm working on
 
-## getting started
+- 🔹 **[Xerolas](https://xerolas.com)** — founder & full stack developer. I built the entire product from start to finish: a two-sided marketplace for Ethiopian university students to buy and sell past exam papers. Grown to 70 active users with revenue being generated.
+- 🔹 **Digital Merkato** — frontend developer, building ERP modules (Financial Management, Fiscal Year/Period Management) for their internal system.
 
-```bash
-git clone https://github.com/BartoszJarocki/cv.git
-cd cv
-pnpm install
-pnpm dev
-# open http://localhost:3000
-# edit src/data/resume-data.ts to customize
-```
+## Tools I use
 
-## scripts
+| | |
+| --- | --- |
+| **Languages** | TypeScript, JavaScript, Python, SQL |
+| **Frontend** | Next.js 16, React 19, Tailwind CSS, TanStack Query, Zustand, Framer Motion |
+| **Backend** | Hono, Node.js, Prisma ORM, REST APIs |
+| **Databases** | PostgreSQL, MongoDB, Redis, Supabase |
+| **AI** | LLMs, Gemini API, Pinecone, MCP, n8n |
+| **Platform** | Docker, Turborepo, Vercel, Stripe, Chapa, Better Auth, Clerk |
+| **Design** | Figma, design systems, wireframing, prototyping |
 
-```bash
-pnpm dev          # start development server
-pnpm build        # build for production
-pnpm start        # start production server
-pnpm lint         # run biome linting checks
-pnpm lint:fix     # run biome linting with auto-fix
-pnpm format       # check code formatting with biome
-pnpm format:fix   # format code with biome
-pnpm check        # run both linting and formatting checks
-pnpm check:fix    # run both linting and formatting with auto-fix
-```
+## Technical writing
 
-## project structure
+I write about software development, AI trends, and engineering insights — sharing what I learn as I build.
 
-```
-src/
-├── app/                # next.js app router
-│   ├── components/     # page-level components
-│   │   ├── education.tsx
-│   │   ├── header.tsx
-│   │   ├── projects.tsx
-│   │   ├── skills.tsx
-│   │   ├── summary.tsx
-│   │   └── work-experience.tsx
-│   ├── layout.tsx      # root layout with metadata
-│   └── page.tsx        # main resume page
-├── components/         # shared components
-│   ├── icons/          # social icon components
-│   └── ui/             # shadcn/ui components
-├── data/               # resume data configuration
-│   └── resume-data.ts
-└── lib/                # utilities and types
-    ├── structured-data.ts
-    ├── types.ts
-    └── utils.ts
-```
+- ✍️ **[naz.gitbook.io](https://naz.gitbook.io)** — my technical blog
 
-## customization
+## Hobbies
 
-all resume content lives in a single file:
+Outside of building products, you'll find me:
 
-```typescript
-// src/data/resume-data.ts
-export const RESUME_DATA = {
-  name: "Your Name",
-  initials: "YN",
-  location: "Your City, Country",
-  about: "Brief description",
-  summary: "Professional summary",
-  // ... more fields
-}
-```
+- 📚 reading technical articles and books
+- 🎥 watching technical YouTube videos
+- 🤖 exploring AI and new tools
+- ✍️ writing technical things about what I learn
 
-styling uses tailwind css — customize colors in `tailwind.config.js` and global styles in `src/app/globals.css`.
+## How to reach me
 
-## docker
-
-```bash
-docker compose build     # build the container
-docker compose up -d     # run the container
-docker compose down      # stop the container
-```
-
-## license
-
-MIT
+- 📧 Email: [nahomkasa345@gmail.com](mailto:nahomkasa345@gmail.com)
+- 💼 LinkedIn: [nahom-kasa-84bb84325](https://www.linkedin.com/in/nahom-kasa-84bb84325/)
+- 🐙 GitHub: [nahomkasa999](https://github.com/nahomkasa999)
+- ✍️ Writing: [naz.gitbook.io](https://naz.gitbook.io)

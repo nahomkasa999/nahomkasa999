@@ -1,5 +1,6 @@
 "use client";
 
+import { ArrowSquareOutIcon } from "@phosphor-icons/react";
 import { Badge } from "@/components/ui/badge";
 import {
   Card,
@@ -17,12 +18,13 @@ interface UiUxCardProps {
   title: string;
   description: string;
   skills: UiUxSkills;
+  figma?: string;
 }
 
 /**
  * Card component displaying UI/UX design information
  */
-function UiUxCard({ title, description, skills }: UiUxCardProps) {
+function UiUxCard({ title, description, skills, figma }: UiUxCardProps) {
   return (
     <Card className="flex h-full flex-col overflow-hidden border p-3 print:border-0 print:p-0 print:shadow-none">
       <CardHeader className="print:p-0">
@@ -34,6 +36,18 @@ function UiUxCard({ title, description, skills }: UiUxCardProps) {
           >
             {description}
           </CardDescription>
+          {figma && (
+            <a
+              href={figma}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex w-fit items-center gap-1 text-xs text-muted-foreground hover:text-foreground hover:underline"
+              aria-label={`${title} Figma file (opens in new tab)`}
+            >
+              View on Figma
+              <ArrowSquareOutIcon className="size-3" weight="bold" />
+            </a>
+          )}
         </div>
       </CardHeader>
       <CardContent className="mt-auto print:hidden">
@@ -48,10 +62,7 @@ function UiUxCard({ title, description, skills }: UiUxCardProps) {
             >
               {skills.map((skill) => (
                 <li key={skill}>
-                  <Badge
-                    className="px-1 py-0 text-[10px]"
-                    variant="secondary"
-                  >
+                  <Badge className="px-1 py-0 text-[10px]" variant="secondary">
                     {skill}
                   </Badge>
                 </li>
@@ -105,6 +116,7 @@ export function UiUx({ designs }: UiUxProps) {
               title={design.title}
               description={design.description}
               skills={design.skills}
+              figma={design.figma}
             />
           </article>
         ))}

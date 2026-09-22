@@ -40,7 +40,10 @@ function ProjectLink({ title, link }: ProjectLinkProps) {
       >
         {title}
         {isLive ? (
-          <ArrowSquareOutIcon className="size-3.5 text-green-600" weight="bold" />
+          <ArrowSquareOutIcon
+            className="size-3.5 text-green-600"
+            weight="bold"
+          />
         ) : (
           <span
             className="size-1 rounded-full bg-green-500"

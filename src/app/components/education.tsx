@@ -1,4 +1,4 @@
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { CardContent, CardHeader } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
 import type { RESUME_DATA } from "@/data/resume-data";
 
@@ -35,7 +35,7 @@ function EducationItem({ education }: EducationItemProps) {
   const schoolId = `education-${school.toLowerCase().replace(/\s+/g, "-")}`;
 
   return (
-    <Card className="border-none">
+    <>
       <CardHeader>
         <div className="flex items-center justify-between gap-x-2 text-base">
           <h3 className="font-semibold leading-none" id={schoolId}>
@@ -50,7 +50,7 @@ function EducationItem({ education }: EducationItemProps) {
       >
         {degree}
       </CardContent>
-    </Card>
+    </>
   );
 }
 

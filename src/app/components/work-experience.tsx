@@ -1,5 +1,5 @@
 import { Badge } from "@/components/ui/badge";
-import { Card, CardContent, CardHeader } from "@/components/ui/card";
+import { CardContent, CardHeader } from "@/components/ui/card";
 import { Section } from "@/components/ui/section";
 import type { RESUME_DATA } from "@/data/resume-data";
 import { cn } from "@/lib/utils";
@@ -92,7 +92,7 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
     work;
 
   return (
-    <Card className="border-none py-1 print:py-0">
+    <>
       <CardHeader className="print:space-y-1">
         <div className="flex items-center justify-between gap-x-2 text-base">
           <h3 className="inline-flex items-center justify-center gap-x-1 font-semibold leading-none print:text-sm">
@@ -118,13 +118,10 @@ function WorkExperienceItem({ work }: WorkExperienceItemProps) {
           )}
         </div>
         <div className="mt-3">
-          <BadgeList
-            className="flex-wrap gap-1"
-            badges={badges}
-          />
+          <BadgeList className="flex-wrap gap-1" badges={badges} />
         </div>
       </CardContent>
-    </Card>
+    </>
   );
 }
 

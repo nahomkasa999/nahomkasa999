@@ -5,7 +5,8 @@ export const RESUME_DATA: ResumeData = {
   initials: "NK",
   location: "Addis Ababa, Ethiopia, EAT",
   locationLink: "https://www.google.com/maps/place/Addis+Ababa",
-  about: "Full Stack Developer & UI/UX Designer building AI-integrated applications.",
+  about:
+    "Full Stack Developer & UI/UX Designer building AI-integrated applications.",
   summary:
     "Full Stack Developer with experience building SaaS platforms, AI-powered tools, and enterprise applications. Passionate about creating products that solve real problems and delivering clean, maintainable code.",
   avatarUrl: "/myimage.jpeg",
@@ -38,7 +39,14 @@ export const RESUME_DATA: ResumeData = {
     {
       company: "Xerolas",
       link: "https://xerolas.com",
-      badges: ["Next.js 16", "TypeScript", "Prisma", "PostgreSQL", "Hono", "AI"],
+      badges: [
+        "Next.js 16",
+        "TypeScript",
+        "Prisma",
+        "PostgreSQL",
+        "Hono",
+        "AI",
+      ],
       title: "Founder & Full Stack Developer",
       start: "2026",
       end: null,
@@ -54,7 +62,13 @@ export const RESUME_DATA: ResumeData = {
     {
       company: "Digital Merkato",
       link: "",
-      badges: ["React", "TypeScript", "Tailwind CSS", "ERP", "Financial Systems"],
+      badges: [
+        "React",
+        "TypeScript",
+        "Tailwind CSS",
+        "ERP",
+        "Financial Systems",
+      ],
       title: "Frontend Developer",
       start: "Jun 2026",
       end: null,
@@ -137,8 +151,19 @@ export const RESUME_DATA: ResumeData = {
   projects: [
     {
       title: "Xerolas",
-      techStack: ["Next.js 16", "React 19", "TypeScript", "Tailwind CSS 4", "Hono", "Prisma", "PostgreSQL", "TanStack Query", "Zustand"],
-      description: "Two-sided exam paper marketplace — solved the problem of students wasting hours searching Telegram groups for exam papers. Grew to 70 users with revenue being generated.",
+      techStack: [
+        "Next.js 16",
+        "React 19",
+        "TypeScript",
+        "Tailwind CSS 4",
+        "Hono",
+        "Prisma",
+        "PostgreSQL",
+        "TanStack Query",
+        "Zustand",
+      ],
+      description:
+        "Two-sided exam paper marketplace — solved the problem of students wasting hours searching Telegram groups for exam papers. Grew to 70 users with revenue being generated.",
       link: {
         label: "xerolas.com",
         href: "https://xerolas.com",
@@ -146,8 +171,16 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       title: "EthioERP",
-      techStack: ["Next.js 16", "Hono", "Better Auth", "Prisma", "TanStack Query", "Zustand"],
-      description: "Multi-tenant ERP system — solved the problem of managing Ethiopian businesses with dual calendar support (Ethiopian & Gregorian), inventory, and HR.",
+      techStack: [
+        "Next.js 16",
+        "Hono",
+        "Better Auth",
+        "Prisma",
+        "TanStack Query",
+        "Zustand",
+      ],
+      description:
+        "Multi-tenant ERP system — solved the problem of managing Ethiopian businesses with dual calendar support (Ethiopian & Gregorian), inventory, and HR.",
       link: {
         label: "erp-rho-nine.vercel.app",
         href: "https://erp-rho-nine.vercel.app",
@@ -156,7 +189,8 @@ export const RESUME_DATA: ResumeData = {
     {
       title: "Nazarians Worship Ministry",
       techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-      description: "Church website — solved the problem of managing worship ministry events, sermon archives, and community engagement in one place.",
+      description:
+        "Church website — solved the problem of managing worship ministry events, sermon archives, and community engagement in one place.",
       link: {
         label: "nazarians-worship-ministry.vercel.app",
         href: "https://nazarians-worship-ministry.vercel.app",
@@ -165,7 +199,8 @@ export const RESUME_DATA: ResumeData = {
     {
       title: "Sena",
       techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-      description: "Student Learning Management Platform built to help younger brothers with their studies — manage courses, assignments, and academic progress.",
+      description:
+        "Student Learning Management Platform built to help younger brothers with their studies — manage courses, assignments, and academic progress.",
       link: {
         label: "sena-rosy.vercel.app",
         href: "https://sena-rosy.vercel.app/",
@@ -173,8 +208,16 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       title: "AI Story Studio",
-      techStack: ["Next.js 15", "Hono.js", "Gemini AI", "Supabase", "Stripe", "React-PDF"],
-      description: "Multi-tenant AI Story Generation platform — solved the problem of creating illustrated digital books by integrating Gemini AI for narrative generation and image synthesis.",
+      techStack: [
+        "Next.js 15",
+        "Hono.js",
+        "Gemini AI",
+        "Supabase",
+        "Stripe",
+        "React-PDF",
+      ],
+      description:
+        "Multi-tenant AI Story Generation platform — solved the problem of creating illustrated digital books by integrating Gemini AI for narrative generation and image synthesis.",
       link: {
         label: "mymagicalstory-web.vercel.app",
         href: "https://mymagicalstory-web.vercel.app",
@@ -183,7 +226,8 @@ export const RESUME_DATA: ResumeData = {
     {
       title: "Prekly",
       techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
-      description: "Web application project — built with a team to solve specific user needs using modern web technologies.",
+      description:
+        "Web application project — built with a team to solve specific user needs using modern web technologies.",
       link: {
         label: "github.com/ye-we/perkly",
         href: "https://github.com/ye-we/perkly",
@@ -192,7 +236,8 @@ export const RESUME_DATA: ResumeData = {
     {
       title: "Technical Blog",
       techStack: ["GitBook", "Technical Writing"],
-      description: "Technical blog posts — sharing knowledge about software development, AI trends, and engineering insights to help other developers.",
+      description:
+        "Technical blog posts — sharing knowledge about software development, AI trends, and engineering insights to help other developers.",
       link: {
         label: "naz.gitbook.io",
         href: "https://naz.gitbook.io",
@@ -202,21 +247,53 @@ export const RESUME_DATA: ResumeData = {
   uiux: [
     {
       title: "Certo Software",
-      description: "Mobile privacy & security landing page with conversion-focused design, testimonial sections, and feature showcases.",
+      description:
+        "Mobile privacy & security landing page with conversion-focused design, testimonial sections, and feature showcases.",
       image: "/uiux/certosoftware.com.png",
-      skills: ["UI Design", "Landing Page", "Responsive Design", "Design System", "Component Architecture", "Color Theory", "Typography"],
+      skills: [
+        "UI Design",
+        "Landing Page",
+        "Responsive Design",
+        "Design System",
+        "Component Architecture",
+        "Color Theory",
+        "Typography",
+      ],
+      figma:
+        "https://www.figma.com/design/V7y7BxVgzqra2v6Zrl5G0B/UI-UX-protfolio-for-landing-pages?node-id=0-1&t=UTOYJbwbaHDbUhIJ-1",
     },
     {
       title: "Thirdweb Studio",
-      description: "Web3 design studio website with dark theme, gradient effects, and modern animations for crypto/blockchain audience.",
+      description:
+        "Web3 design studio website with dark theme, gradient effects, and modern animations for crypto/blockchain audience.",
       image: "/uiux/thirdweb.studio.png",
-      skills: ["Dark UI", "Gradient Design", "Motion Design", "Brand Identity", "Visual Hierarchy", "Framer Motion"],
+      skills: [
+        "Dark UI",
+        "Gradient Design",
+        "Motion Design",
+        "Brand Identity",
+        "Visual Hierarchy",
+        "Framer Motion",
+      ],
+      figma:
+        "https://www.figma.com/design/V7y7BxVgzqra2v6Zrl5G0B/UI-UX-protfolio-for-landing-pages?node-id=0-1&t=UTOYJbwbaHDbUhIJ-1",
     },
     {
       title: "Xerolas Platform",
-      description: "Exam paper marketplace UI/UX design with clean layout, search functionality, and student-friendly interface.",
+      description:
+        "Exam paper marketplace UI/UX design with clean layout, search functionality, and student-friendly interface.",
       image: "/uiux/Main.png",
-      skills: ["Product Design", "UX Research", "Wireframing", "Prototyping", "User Flow", "Figma", "Design System"],
+      skills: [
+        "Product Design",
+        "UX Research",
+        "Wireframing",
+        "Prototyping",
+        "User Flow",
+        "Figma",
+        "Design System",
+      ],
+      figma:
+        "https://www.figma.com/design/Fleu4ukNchJxKVbuIl7F9q/AAU-EXAM?t=UTOYJbwbaHDbUhIJ-1",
     },
   ],
 } as const;
