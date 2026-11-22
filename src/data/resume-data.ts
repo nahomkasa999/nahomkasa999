@@ -171,9 +171,18 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       title: "YouTube Clipper",
-      techStack: ["YouTube", "Video Clipping"],
+      techStack: [
+        "YouTube",
+        "Python",
+        "Gemini API",
+        "Google Face Tracking",
+        "Background Jobs",
+        "Next.js",
+        "Shadcn UI",
+        "Zustand",
+      ],
       description:
-        "Takes a YouTube video, finds the best moments, clips them, and uploads the clips.",
+        "Takes a YouTube video, uses Gemini API and Google face tracking to find the best moments, clips them in background jobs, and uploads the clips — Next.js + Shadcn UI frontend with Zustand state management.",
     },
     {
       title: "Xerolas",
