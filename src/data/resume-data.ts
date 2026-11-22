@@ -8,7 +8,7 @@ export const RESUME_DATA: ResumeData = {
   about:
     "Full Stack Developer & UI/UX Designer building AI-integrated applications.",
   summary:
-    "Full Stack Developer with experience building SaaS platforms, AI-powered tools, and enterprise applications. Passionate about creating products that solve real problems and delivering clean, maintainable code.",
+    "Full Stack Developer with experience building SaaS platforms, AI-powered tools, and enterprise applications. Passionate about creating products that solve real problems and delivering clean, maintainable code. Ranked #87 of 503 developers in Ethiopia on Specsheet (Nov 2026) — top 100 on the Ethiopia board.",
   avatarUrl: "/myimage.jpeg",
   personalWebsiteUrl: "https://naz.gitbook.io",
   contact: {
@@ -32,7 +32,7 @@ export const RESUME_DATA: ResumeData = {
       school: "Addis Ababa University (AAU)",
       degree: "B.Sc. in Civil Engineering",
       start: "2024",
-      end: "2030 (Expected)",
+      end: "2028",
     },
   ],
   work: [
@@ -48,7 +48,7 @@ export const RESUME_DATA: ResumeData = {
         "AI",
       ],
       title: "Founder & Full Stack Developer",
-      start: "2026",
+      start: "Jan 2026",
       end: null,
       description:
         "Built the entire product from start to finish — a two-sided marketplace for Ethiopian university students to buy and sell past exam papers.",
@@ -61,7 +61,7 @@ export const RESUME_DATA: ResumeData = {
     },
     {
       company: "Digital Merkato",
-      link: "",
+      link: "https://digitalmerkato.com.et/",
       badges: [
         "React",
         "TypeScript",
@@ -150,6 +150,32 @@ export const RESUME_DATA: ResumeData = {
   ],
   projects: [
     {
+      title: "AI Book Narrator Studio",
+      techStack: ["Python", "Kokoro TTS", "RunPod", "Gemini API"],
+      description:
+        "AI audiobook narrator studio — turns long-form books (12,000–20,000+ words) into narrated audio and YouTube videos, with local Kokoro-82M, RunPod GPU, and cloud voice engines, shipped as a desktop app.",
+      link: {
+        label: "github.com/nahomkasa999/Text-speech-ytautomation",
+        href: "https://github.com/nahomkasa999/Text-speech-ytautomation",
+      },
+    },
+    {
+      title: "Etenesh HR Insights",
+      techStack: ["Next.js", "Payload CMS", "PostgreSQL", "TypeScript"],
+      description:
+        "Ethiopian job board with application tracking — job listings with 24 demo vacancies, in-board Apply with eligibility checks, and an HR dashboard to move applicants through review, shortlist, interview, offer, and hired, with match scores and CVs.",
+      link: {
+        label: "github.com/nahomkasa999/etenesh-hr-insights",
+        href: "https://github.com/nahomkasa999/etenesh-hr-insights",
+      },
+    },
+    {
+      title: "YouTube Clipper",
+      techStack: ["YouTube", "Video Clipping"],
+      description:
+        "Takes a YouTube video, finds the best moments, clips them, and uploads the clips.",
+    },
+    {
       title: "Xerolas",
       techStack: [
         "Next.js 16",
@@ -200,7 +226,7 @@ export const RESUME_DATA: ResumeData = {
       title: "Sena",
       techStack: ["Next.js", "TypeScript", "Tailwind CSS"],
       description:
-        "Student Learning Management Platform built to help younger brothers with their studies — manage courses, assignments, and academic progress.",
+        "Student Learning Management Platform built to help my younger brother with his studies — manage courses, assignments, and academic progress.",
       link: {
         label: "sena-rosy.vercel.app",
         href: "https://sena-rosy.vercel.app/",
