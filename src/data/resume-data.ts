@@ -73,7 +73,7 @@ export const RESUME_DATA: ResumeData = {
       start: "Jun 2026",
       end: null,
       description:
-        "Built 2 ERP modules for their internal system — Financial Management and Fiscal Year/Period Management.",
+        "Built 6 ERP modules for their internal system, including Financial Management and Fiscal Year/Period Management.",
       highlights: [
         "Problem: They needed an ERP system to manage their growing business operations",
         "Solution: Built Financial Management module (fixed assets, variable costs, depreciation tracking)",
